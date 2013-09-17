@@ -56,11 +56,6 @@ class FightForLifeApp < Sinatra::Application
         end
 
         if params[:comment] != ""
-          Pony.options = {
-            :to => ENV['DONATION_EMAIL'],
-            :subject => 'Donor Comments'
-          }
-
           body =
           <<-BODY
           Someone that has made a donation also added a comment to it. You can see this below:
@@ -72,7 +67,7 @@ class FightForLifeApp < Sinatra::Application
           #{params[:comment]}
           BODY
 
-          Pony.mail(:from => params[:donor_email], :body => body)
+          Pony.mail(:to => ENV['DONATION_EMAIL'], :subject => 'Donor Comments', :from => params[:donor_email], :body => body)
         end
       end
 
@@ -112,11 +107,6 @@ class FightForLifeApp < Sinatra::Application
   end
 
   post '/send' do
-    Pony.options = {
-      :to => ENV['CONTACT_EMAIL'],
-      :subject => 'Website Inquiry'
-    }
-
     body =
     <<-BODY
     Contact Inquiry
@@ -141,7 +131,7 @@ class FightForLifeApp < Sinatra::Application
       @required_class = ' class="required"'
       erb :contact
     else
-      Pony.mail(:from => params[:email], :body => body)
+      Pony.mail(:to => ENV['CONTACT_EMAIL'], :subject => 'Website Inquiry', :from => params[:email], :body => body)
       erb :thank_you
     end
   end

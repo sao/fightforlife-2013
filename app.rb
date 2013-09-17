@@ -5,6 +5,7 @@ require 'sass'
 require 'vimeo'
 require 'stripe'
 require 'pony'
+require 'pry'
 
 class FightForLifeApp < Sinatra::Application
 

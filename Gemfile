@@ -20,5 +20,6 @@ end
 group :development do
   gem 'thin'
   gem 'tux'
+  gem 'pry'
 end
 
