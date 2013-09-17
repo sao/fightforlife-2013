@@ -19,4 +19,6 @@ end
 
 group :development do
   gem 'thin'
+  gem 'tux'
 end
+
