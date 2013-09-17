@@ -45,7 +45,7 @@ class FightForLifeApp < Sinatra::Application
   Pony.options = {
     :via => :smtp,
     :via_options => {
-      :port => '587',
+      :port => 587,
       :address => 'smtp.mandrillapp.com',
       :user_name => ENV['MANDRILL_USERNAME'],
       :password => ENV['MANDRILL_APIKEY'],
@@ -53,7 +53,6 @@ class FightForLifeApp < Sinatra::Application
       :enable_starttls_auto => true
     }
   }
-
 
   def current_page
     slug = request.path_info[1..-1]
