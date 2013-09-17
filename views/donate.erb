@@ -1,0 +1,88 @@
+<div class="content">
+  <h2 class="page_title"><%= current_page %></h2>
+  <div id="donate_form">
+    <form action="/donate" method="POST" id="payment_form">
+      <div class="donate-form-left">
+
+        <p class="message">
+          Every dollar makes a difference in the Fight for Life. Your generosity is
+          extremely appreciated!
+        </p>
+
+        <div class="form-row">
+          <label>Name</label>
+          <input name="donor_name" type="text" size="25" autocomplete="off" class="donor-name" />
+        </div>
+
+        <div class="form-row">
+          <label>Email</label>
+          <input name="donor_email" type="text" size="25" autocomplete="off" class="donor-email" />
+        </div>
+
+        <div class="form-row">
+          <label>Card Number</label>
+          <input type="text" size="25" autocomplete="off" class="card-number" />
+        </div>
+
+        <div class="form-row">
+          <label>CVC</label>
+          <span class="cvc-code">(three digit number on the back of your card)</span>
+          <input type="text" size="2" autocomplete="off" class="card-cvc" />
+        </div>
+
+        <div class="form-row">
+          <label>Expiration</label>
+          <input type="text" size="2" class="card-expiry-month" placeholder="MM" />
+          <span>/</span>
+          <input type="text" size="4" class="card-expiry-year" placeholder="YYYY" />
+        </div>
+
+        <div class="form-row">
+          <label>Donation</label>
+          <input name="amount" type="text" size="4" autocomplete="off" class="donation-amount" placeholder="$0.00" />
+        </div>
+
+        <div class="form-row">
+          <label>Donation Type</label>
+          <input name="donation_type" class="donation-type" type="radio" id="ot" value="one-time" checked />
+          <label for="ot" class="donation-type-label">One Time</label>
+          <input name="donation_type" class="donation-type" type="radio" id="monthly" value="monthly" />
+          <label for="monthly" class="donation-type-label">Monthly</label>
+        </div>
+
+        <div class="form-row">
+          <label for="comments">Comment</label>
+          <textarea name="comment" id="comment"></textarea>
+        </div>
+      </div>
+      <div class="donate-form-right">
+        <p>
+          <span class="attention">Attention:</span> If you would like to cancel your recurring
+          donation please <a href="mailto:info@fightforlifeevent.org?subject=Cancel Subscription">click here</a>
+          to email us or call us at 661-837-0477 x224
+        </p>
+        <p>
+          Not only can you donate online, but also by calling and donating over
+          the phone or in person at the Advanced Industrial Services headquarters.
+          Come on by to find out more about our cause or even just to say hello!
+        </p>
+        <p class="address">
+          <strong>Advanced Industrial Services</strong><br />
+          34933 Imperial St.<br />
+          Bakersfield, CA 93308<br />
+          <a href="#">Get Directions</a>
+        </p>
+        <h3 class="donate-hotline">Call 661-837-0477 and<br />donate over the phone!</h2>
+      </div>
+
+      <div class="form-row form-submit">
+        <input type="submit" class="submit-button" value="Submit Donation" />
+      </div>
+
+      <div id="submitting" class="form-row">
+        <img src="/images/spinner.gif" width="32" height="32" />
+        Submitting your donation, please wait.
+      </div>
+    </form>
+  </div>
+</div>

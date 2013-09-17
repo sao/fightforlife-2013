@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Fight For Life | <%= !current_page.empty? ? current_page : "Hope Is Here" %></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <%= css :application, :media => 'screen' %>
+    <%= js :app %>
+
+    <script type="text/javascript" src="//use.typekit.net/omn5ztu.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    <script src="https://js.stripe.com/v1/"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body class="<%= request.path_info[1..-1] %>">
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+    <div id="top">
+      <div class="container">
+
+        <header>
+          <h1 id="logo"><a href="/">Fight For Life</a></h1>
+
+          <div id="nav_container">
+            <nav id="main_nav">
+              <ul>
+                <li><a href="about">About</a></li>
+                <!-- <li><a href="partners">Partners</a></li> -->
+                <!-- <li><a href="community">Community</a></li> -->
+                <li><a href="events">Events</a></li>
+                <!-- <li><a href="media">Media</a></li> -->
+                <li><a href="contact">Contact</a></li>
+                <li class="make_a_donation"><a href="donate">Make A Donation</a></li>
+              </ul>
+            </nav>
+            <nav id="second_nav">
+              <ul>
+                <li><span>Watch</span><a href="stories">The Stories</a></li>
+                <li><span>Learn how to</span><a href="get-involved">Get Involved</a></li>
+                <li><span>Connect on</span><a href="https://www.facebook.com/pages/Fight-For-Life/159190377498326?ref=ts&fref=ts" target="_blank">Facebook</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>

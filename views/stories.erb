@@ -1,0 +1,10 @@
+<div class="content">
+  <h2 class="page_title"><%= current_page %></h2>
+  <iframe src="http://player.vimeo.com/video/60724629?title=0&amp;byline=0&amp;portrait=0&amp;color=53446e" width="890" height="501" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+  <ul class="videos">
+  <% @videos.each do |v| %>
+    <li><a class="fancybox-media" href="<%= v['url'] %>" name="<%= v['name'] %>"><%= image_tag(v['thumbnail_medium'], :alt => v['title']) %></a></li>
+  <% end %>
+  </ul>
+  <a id="all-stories" href="http://vimeo.com/fightforlife/" target="_blank">View all stories on Vimeo</a>
+</div>

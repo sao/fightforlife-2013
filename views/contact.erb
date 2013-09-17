@@ -1,0 +1,46 @@
+<div class="content">
+    <div id="content_text">
+    <h2 class="page_title"><%= current_page %></h2>
+    <p>
+      You can contact us in many different ways. You can fill out the form below
+      or use one of the contact numbers on the right side to get in touch with someone
+      immediately.
+    </p>
+    <p>
+      Also, don't forget to like us on <a href="https://www.facebook.com/pages/Fight-For-Life/159190377498326?ref=ts&fref=ts" name="Facebook">Facebook</a> where you can also contact us directly!
+    </p>
+
+    <% if @errors.any? %>
+    <p class="errors">
+      Please fill out all the required fields and resubmit the form.
+    </p>
+    <% end %>
+
+    <form id="contact" action="/send" method="post">
+
+      <div>
+        <label for="name">Name</label>
+        <input<%= @required_class if @errors.include?(:name) %> type="text" name="name" value="<%= params[:name] %>" />
+
+        <label for="email">Email</label>
+        <input<%= @required_class if @errors.include?(:email) %> type="text" name="email" value="<%= params[:email] %>" />
+
+        <label for="phone">Phone</label>
+        <input<%= @required_class if @errors.include?(:phone) %> type="text" name="phone" value="<%= params[:phone] %>" />
+      </div>
+
+      <div class="contact-message">
+        <label for="message">Message</label>
+        <textarea<%= @required_class if @errors.include?(:message) %> name="message"><%= params[:message] %></textarea>
+      </div>
+
+      <div class="submit-area">
+        <input type="submit" name="Submit" value="Send" />
+      </div>
+
+    </form>
+  </div>
+
+  <%= erb :'partials/_sidebar' %>
+
+</div>

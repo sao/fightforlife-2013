@@ -1,0 +1,66 @@
+        <div id="slider-wrapper">
+          <div id="slider" class="nivoSlider">
+            <img src="/images/slider/ffl-truck.png" title="#htmlcaption" />
+            <img src="/images/slider/nts-racecar.png" title="#htmlcaption2" />
+            <img src="/images/slider/issac-niki.png" title="#htmlcaption3" />
+          </div>
+        </div>
+
+        <div id="htmlcaption" class="nivo-html-caption">
+          <h2>Fight For Life in Nascar</h2>
+          <p>
+            We are proud sponsors of #14<br />
+            Brennan Newberry
+          </p>
+        </div>
+
+        <div id="htmlcaption2" class="nivo-html-caption">
+          <h2>Fight For Life &amp; <br />NTS Motorsports</h2>
+          <p>
+            Brennan Newberry crosses finish line<br />
+            in sixth-place in his Daytona International<br />
+            Speedway debut!
+          </p>
+        </div>
+
+        <div id="htmlcaption3" class="nivo-html-caption">
+          <h2>Issac &amp; Niki</h2>
+          <p>
+            Issac &amp; Niki pose next to their<br />
+            sponsored race cars from<br />
+            Doby Hagar Trucking.
+          </p>
+          <a href="stories">Watch their stories!</a>
+        </div>
+
+        <div id="the-stories" class="section-container">
+          <h3 class="section-title">The Stories</h3>
+          <iframe src="http://player.vimeo.com/video/60724629?title=0&amp;byline=0&amp;portrait=0&amp;color=53446e" width="890" height="501" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+          <ul class="videos">
+          <% @videos.each do |v| %>
+            <li><a class="fancybox-media" href="<%= v['url'] %>" name="<%= v['name'] %>"><%= image_tag(v['thumbnail_medium'], :alt => v['title']) %></a></li>
+          <% end %>
+          </ul>
+          <a id="all-stories" href="stories">View more stories</a>
+        </div>
+
+        <div id="become-a-partner" class="section-container">
+          <h3 class="section-title">Become A Community Partner</h3>
+          <p>
+            This year's Fight for Life event will be our 6th annual fundraiser
+            and we couldn't be happier to be hosting it for some of the most
+            generous and warm hearted individuals. Last year our event raised
+            $632,000 on its own. There was also a dollar-for-dollar match put
+            up by Dr. Patel of CBCC which brought the total to $1.3 million.
+            Every single penny of that was put into a fund called Kern County
+            Cancer Fund to help local cancer patients. It's important that the
+            money raised by local businesses is kept here to help local patients
+            and by becoming a community partner you are raising a voice in helping
+            individuals, families and friends in getting the treatment they deserve.
+            We believe that family and community support are some of the most
+            important things to those whose lives are affected by cancer. No one
+            should go through this fight alone and we work day
+            and night to do our best in making sure that doesn't happen.
+          </p>
+          <a id="learn-how" href="get-involved">Learn How You Can Help</a>
+        </div>

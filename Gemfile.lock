@@ -1,0 +1,85 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    daemons (1.1.9)
+    eventmachine (1.0.3)
+    httparty (0.10.2)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
+    httpclient (2.3.2)
+    i18n (0.6.2)
+    jsmin (1.0.1)
+    json (1.7.7)
+    kgio (2.8.0)
+    mail (2.5.3)
+      i18n (>= 0.4.0)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    mime-types (1.21)
+    multi_json (1.6.1)
+    multi_xml (0.5.3)
+    multipart-post (1.1.5)
+    newrelic_rpm (3.6.3.106)
+    oauth (0.4.7)
+    polyglot (0.3.3)
+    pony (1.4)
+      mail (> 2.0)
+    rack (1.4.1)
+    rack-protection (1.3.2)
+      rack
+    rack-ssl-enforcer (0.2.5)
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    raindrops (0.10.0)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    sass (3.2.5)
+    sinatra (1.3.4)
+      rack (~> 1.4)
+      rack-protection (~> 1.3)
+      tilt (~> 1.3, >= 1.3.3)
+    sinatra-assetpack (0.1.5)
+      jsmin
+      rack-test
+      sinatra
+      tilt (>= 1.3.0)
+    sinatra-static-assets (1.0.4)
+      sinatra (>= 1.1.0)
+    stripe (1.7.11)
+      multi_json (>= 1.0.4, < 2)
+      rest-client (~> 1.4)
+    thin (1.5.1)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
+    tilt (1.3.3)
+    treetop (1.4.12)
+      polyglot
+      polyglot (>= 0.3.1)
+    unicorn (4.6.2)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
+    vimeo (1.5.3)
+      httparty (>= 0.4.5)
+      httpclient (>= 2.1.5.2)
+      json (>= 1.1.9)
+      multipart-post (>= 1.0.1)
+      oauth (>= 0.4.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  newrelic_rpm
+  pony
+  rack (= 1.4.1)
+  rack-ssl-enforcer
+  sass
+  sinatra
+  sinatra-assetpack
+  sinatra-static-assets
+  stripe
+  thin
+  unicorn
+  vimeo
