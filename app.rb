@@ -31,11 +31,11 @@ class FightForLifeApp < Sinatra::Application
   Pony.options = {
     :via => :smtp,
     :via_options => {
-      :address => 'smtp.sendgrid.net',
       :port => '587',
+      :address => 'smtp.mandrillapp.com',
+      :user_name => ENV['MANDRILL_USERNAME'],
+      :password => ENV['MANDRILL_APIKEY'],
       :domain => 'heroku.com',
-      :user_name => ENV['SENDGRID_USERNAME'],
-      :password => ENV['SENDGRID_PASSWORD'],
       :authentication => :plain,
       :enable_starttls_auto => true
     }
