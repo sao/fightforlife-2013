@@ -1,4 +1,18 @@
+require 'sinatra'
+require 'sinatra/static_assets'
+require 'sinatra/assetpack'
+require 'sass'
+require 'vimeo'
+require 'stripe'
+require 'pony'
+
 class FightForLifeApp < Sinatra::Application
+
+  configure :production do
+    require 'newrelic_rpm'
+    require 'rack/ssl-enforcer'
+    use Rack::SslEnforcer, :only => '/donate'
+  end
 
   set :root, File.dirname(__FILE__)
 
