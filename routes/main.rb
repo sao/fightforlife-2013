@@ -2,13 +2,7 @@ class FightForLifeApp < Sinatra::Application
 
   get '/' do
     video_ids = [60304979, 60298107, 53625305, 29353379, 29347790, 29300070, 29255488, 29256129]
-
-    begin
-      @videos = video_ids.collect { |id| Vimeo::Simple::Video.info(id).first }
-    rescue
-      @videos = []
-    end
-
+    @videos = video_ids.collect { |id| Vimeo::Simple::Video.info(id).first }
     erb :index
   end
 
