@@ -2,7 +2,14 @@ class FightForLifeApp < Sinatra::Application
 
   get '/' do
     video_ids = [60304979, 60298107, 53625305, 29353379, 29347790, 29300070, 29255488, 29256129]
-    @videos = video_ids.collect { |id| Vimeo::Simple::Video.info(id).first }
+    @videos = video_ids.inject([]) do |videos, id|
+      begin
+        videos << Vimeo::Simple::Video.info(id).first
+      rescue
+      end
+
+      videos
+    end
     erb :index
   end
 
@@ -137,7 +144,11 @@ class FightForLifeApp < Sinatra::Application
   end
 
   get '/stories' do
-    @videos = Vimeo::Simple::User.videos("fightforlife")
+    begin
+      @videos = Vimeo::Simple::User.videos("fightforlife")
+    rescue
+      @videos = []
+    end
     erb :stories
   end
 

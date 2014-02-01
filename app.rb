@@ -2,7 +2,7 @@ require 'sinatra'
 require 'sinatra/static_assets'
 require 'sinatra/assetpack'
 require 'sass'
-require 'vimeo'
+# require 'vimeo'
 require 'stripe'
 require 'pony'
 
